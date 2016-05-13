@@ -6,7 +6,7 @@ Examples of [EnvKeyStore](https://github.com/jkutner/env-keystore)
 
 Creating a TrustStore:
 
-```
+```sh-session
 $ mvn package
 $ java -cp target/app.jar TrustStoreExample
 Exception in thread "main" javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathB\
@@ -24,7 +24,7 @@ $ java -cp target/app.jar TrustStoreExample
 
 Creating a KeyStore
 
-```
+```sh-session
 $ openssl genrsa -des3 -passout pass:x -out server.pass.key 2048
 ...
 $ openssl rsa -passin pass:x -in server.pass.key -out server.key
